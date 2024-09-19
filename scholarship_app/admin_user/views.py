@@ -10,3 +10,4 @@ def admin_dashboard(request):
 def manage_student(request):
     return HttpResponse('MANAGE STUDENT')
 
+
