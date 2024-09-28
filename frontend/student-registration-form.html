@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Adamawa State Scholarship Board</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,200" />
 </head>
 <body class="font-serrif flex flex-col gap-8 bg-green-50">
-    <div class="header text-gray bg-emerald-600 w-full h-16 flex items-center justify-center sm:justify-between  px-3 shadow-md ">
+    <div class="header shadow-lg text-gray bg-emerald-600 w-full h-16 flex items-center justify-center sm:justify-between  px-3 shadow-md ">
         <div class="flex items-center text-lg gap-5 font-normal">
           <img class="w-12 h-12" src="download.jpeg" alt="MAU logo">
           <h1 >Adamawa State Scholarship Board</h1>
@@ -24,134 +25,139 @@
           <a href="#">Check Status</a>
         </div>
     </div>
-    <div class="container mt-5 w-2/4 h-3/4 bg-green-100 rounded-md">
-        <h2 class="text-center mb-4">Student Registration Form</h2>
-        <form action="submit_form.php" method="POST">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="user_id">User ID</label>
-                    <input type="text" class="form-control" id="user_id" name="user_id" required>
+    <div class="flex justify-center items-center">
+        <div class="container mt-5 w-3/4 h-3/4 bg-white rounded-md">
+            <h2 class="text-center mb-4">Student Registration Form</h2>
+            <form action="submit_form.php" method="POST">
+                <div class="flex flex-col">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="user_id">User ID</label>
+                            <input type="text" class="form-control" id="user_id" name="user_id" required>
+                        </div>
+            
+                        <div class="form-group col-md-6">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" id="fname" name="fname" required>
+                        </div>
+                    </div>
+            
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="surname">Surname</label>
+                            <input type="text" class="form-control" id="surname" name="surname" required>
+                        </div>
+            
+                        <div class="form-group col-md6">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" id="lname" name="lname" required>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="text" class="form-control" id="phone_number" name="phone_number" required>
+                    </div>
+            
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="gender">Gender</label>
+                            <select id="gender" class="form-control" name="gender" required>
+                                <option value="" disabled selected>Select your gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+            
+                        <div class="form-group col-md-6">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob" name="dob" required>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="disability_status">Disability Status</label>
+                        <select id="disability_status" class="form-control" name="disability_status" required>
+                            <option value="" disabled selected>Select your disability status</option>
+                            <option value="none">None</option>
+                            <option value="physical">Physical</option>
+                            <option value="visual">Visual</option>
+                            <option value="hearing">Hearing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" id="state" name="state" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="lga">Local Government Area (LGA)</label>
+                        <input type="text" class="form-control" id="lga" name="lga" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" name="address" required>
+                    </div>
+            
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="institution">Institution Name</label>
+                            <input type="text" class="form-control" id="institution" name="institution" required>
+                        </div>
+            
+                        <div class="form-group col-md-6">
+                            <label for="matric_number">Matriculation Number</label>
+                            <input type="text" class="form-control" id="matric_number" name="matric_number" required>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="course_of_study">Course of Study</label>
+                        <input type="text" class="form-control" id="course_of_study" name="course_of_study" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="programme">Programme</label>
+                        <select id="programme" class="form-control" name="programme" required>
+                            <option value="" disabled selected>Select your programme</option>
+                            <option value="undergraduate">Undergraduate</option>
+                            <option value="postgraduate">Postgraduate</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="academic_level">Academic Level</label>
+                            <input type="text" class="form-control" id="academic_level" name="academic_level" required>
+                        </div>
+            
+                        <div class="form-group col-md-6">
+                            <label for="cgpa">CGPA</label>
+                            <input type="text" class="form-control" id="cgpa" name="cgpa" required>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="year_of_graduation">Year of Graduation</label>
+                        <input type="number" class="form-control" id="year_of_graduation" name="year_of_graduation" required>
+                    </div>
+            
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                
                 </div>
-    
-                <div class="form-group col-md-6">
-                    <label for="fname">First Name</label>
-                    <input type="text" class="form-control" id="fname" name="fname" required>
-                </div>
-            </div>
-    
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="surname">Surname</label>
-                    <input type="text" class="form-control" id="surname" name="surname" required>
-                </div>
-    
-                <div class="form-group col-md6">
-                    <label for="lname">Last Name</label>
-                    <input type="text" class="form-control" id="lname" name="lname" required>
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="phone_number">Phone Number</label>
-                <input type="text" class="form-control" id="phone_number" name="phone_number" required>
-            </div>
-    
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="gender">Gender</label>
-                    <select id="gender" class="form-control" name="gender" required>
-                        <option value="" disabled selected>Select your gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-    
-                <div class="form-group col-md-6">
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" class="form-control" id="dob" name="dob" required>
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <label for="disability_status">Disability Status</label>
-                <select id="disability_status" class="form-control" name="disability_status" required>
-                    <option value="" disabled selected>Select your disability status</option>
-                    <option value="none">None</option>
-                    <option value="physical">Physical</option>
-                    <option value="visual">Visual</option>
-                    <option value="hearing">Hearing</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-    
-            <div class="form-group">
-                <label for="state">State</label>
-                <input type="text" class="form-control" id="state" name="state" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="lga">Local Government Area (LGA)</label>
-                <input type="text" class="form-control" id="lga" name="lga" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" class="form-control" id="address" name="address" required>
-            </div>
-    
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="institution">Institution Name</label>
-                    <input type="text" class="form-control" id="institution" name="institution" required>
-                </div>
-    
-                <div class="form-group col-md-6">
-                    <label for="matric_number">Matriculation Number</label>
-                    <input type="text" class="form-control" id="matric_number" name="matric_number" required>
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <label for="course_of_study">Course of Study</label>
-                <input type="text" class="form-control" id="course_of_study" name="course_of_study" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="programme">Programme</label>
-                <select id="programme" class="form-control" name="programme" required>
-                    <option value="" disabled selected>Select your programme</option>
-                    <option value="undergraduate">Undergraduate</option>
-                    <option value="postgraduate">Postgraduate</option>
-                    <option value="diploma">Diploma</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-    
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="academic_level">Academic Level</label>
-                    <input type="text" class="form-control" id="academic_level" name="academic_level" required>
-                </div>
-    
-                <div class="form-group col-md-6">
-                    <label for="cgpa">CGPA</label>
-                    <input type="text" class="form-control" id="cgpa" name="cgpa" required>
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <label for="year_of_graduation">Year of Graduation</label>
-                <input type="number" class="form-control" id="year_of_graduation" name="year_of_graduation" required>
-            </div>
-    
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
-        </form>
+            </form>
+        </div>
     </div>
     
 </body>
